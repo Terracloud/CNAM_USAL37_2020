@@ -9,6 +9,7 @@ $pays = [
     'Espagne' => 'Lisbonne',
 ];
 
+
 // array_key_exists()
 // empty()
 
@@ -18,7 +19,14 @@ function capitalCity(string $nom_pays)
 {
     global $pays;
 if (array_key_exists($nom_pays, $pays)) {
+        return $pays[$nom_pays];
+    }
+else {
+    return 'Capitale inconnue';
     }
 }
 
-echo capitalCity('France'); // affiche Paris
+
+$capitale = capitalCity('Amérique');
+echo $capitale;
+echo capitalCity('Belgique');
